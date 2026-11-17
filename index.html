@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Varatharajan Sajanthan | Software Engineering Intern</title>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Bebas+Neue&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0A0B0F;--fg:#F4F4F0;--mute:#8E9099;--line:rgba(255,255,255,.16);--y:#FFD21F;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body.light{--bg:#12082B;--fg:#F4F4F0;--mute:#A9A3C9;--line:rgba(255,255,255,.16);color-scheme:dark}
@@ -25,7 +25,7 @@ nav a{color:#fff;mix-blend-mode:difference;filter:none}
 .hero{min-height:100vh;min-height:100svh;display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 40%,#1E2538 0%,#0A0B0F 62%);color:#F4F4F0}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 45%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 45%,#000 10%,transparent 70%)}
 .hero .wrap{position:relative;width:100%;padding-top:5rem;padding-bottom:3rem}
-.hero h1{font-size:clamp(2.4rem,8vw,6.4rem);letter-spacing:-.01em;position:relative;z-index:3;text-shadow:0 2px 28px rgba(0,0,0,.75)}
+.hero h1{font-size:clamp(2.1rem,5.6vw,4.6rem);max-width:min(54vw,640px);letter-spacing:-.01em;position:relative;z-index:3;text-shadow:0 2px 28px rgba(0,0,0,.75)}
 .hero .tag{margin-top:1.75rem;font-size:.82rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#C9CBD3;position:relative;z-index:2}
 .hero .tag b{color:var(--y);font-weight:600}
 .avatar{position:absolute;right:max(1rem,3vw);bottom:0;width:min(42vw,500px);aspect-ratio:2/3;z-index:1;perspective:900px}
@@ -37,17 +37,17 @@ nav a{color:#fff;mix-blend-mode:difference;filter:none}
 .cta{display:inline-block;margin-top:2rem;padding:.8rem 1.6rem;border-radius:999px;background:var(--y);color:#0A0B0F;font-weight:600;text-decoration:none;position:relative;z-index:2}
 
 /* Sections */
-section{padding:7rem 0}
-h2{font-size:clamp(2.2rem,7vw,5rem);margin-bottom:2.5rem}
+section{padding:4.5rem 0}
+h2{font-size:clamp(2.2rem,7vw,5rem);margin-bottom:1.75rem}
 .lead{font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.4;max-width:30em}
-.row{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem 2rem;padding:2rem 0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem 2rem;padding:1.4rem 0;border-top:1px solid var(--line)}
 .row .n{font-family:"Archivo Black",sans-serif;font-size:clamp(2.4rem,6vw,4rem);line-height:1}
 .row h3{font-size:clamp(1.3rem,3vw,2rem);margin-bottom:.6rem}
 .row p{color:var(--mute);margin:0}
 
 /* Stacked work cards */
 .stack{position:relative}
-.card{position:sticky;top:4.5rem;margin-bottom:6rem;padding:2.25rem;border:2px solid var(--fg);border-radius:28px;background:var(--bg);min-height:360px}
+.card{position:sticky;top:4.5rem;margin-bottom:3rem;padding:2.25rem;border:2px solid var(--fg);border-radius:28px;background:var(--bg);min-height:300px}
 .card + .card{top:6.5rem}
 .card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1.75rem}
 .card .n{font-family:"Archivo Black",sans-serif;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1}
@@ -59,28 +59,67 @@ h2{font-size:clamp(2.2rem,7vw,5rem);margin-bottom:2.5rem}
 .chips li{border:1.5px solid var(--fg);border-radius:999px;padding:.2rem .85rem;font-size:.9rem;font-weight:500;color:var(--fg)}
 
 /* Skills marquee */
-.marquee{overflow:hidden;border-block:1px solid var(--line);padding:1.25rem 0;margin-bottom:3rem}
-.track{display:flex;gap:3rem;width:max-content;animation:go 28s linear infinite;font-family:"Archivo Black",sans-serif;font-size:clamp(2rem,6vw,4rem);text-transform:uppercase;white-space:nowrap}
-.track span:nth-child(even){color:var(--y)}
-@keyframes go{to{transform:translateX(-50%)}}
 .mail{display:inline-block;font-family:"Archivo Black",sans-serif;font-size:clamp(1.3rem,4.6vw,3.2rem);word-break:break-all;line-height:1.1}
 footer{padding:2rem 0 3rem;color:var(--mute);font-size:.9rem}
 @media (max-width:760px){
   .avatar{position:relative;right:auto;margin:2rem auto 0;width:min(78vw,340px)}
   .avatar::after{display:none}
   .hero .wrap{padding-top:5.5rem}
+  .hero h1{max-width:none;font-size:clamp(2rem,9.5vw,3.2rem)}
   .row{grid-template-columns:3.5rem 1fr}
   nav{gap:1.1rem}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track{animation:none}body{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{transition:none}}
+/* Social icons */
+.row-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:2rem;position:relative;z-index:2}
+.row-actions .cta{margin-top:0}
+.socials{display:flex;gap:.75rem}
+.ico{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);color:#F4F4F0;background:rgba(255,255,255,.04);transition:transform .2s,box-shadow .2s,border-color .2s}
+.ico:hover,.ico:focus-visible{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 0 12px rgba(39,243,255,.5);color:#fff}
+.ico svg{width:22px;height:22px}
+.contact-links{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.5rem}
+.clink{display:inline-flex;align-items:center;gap:.9rem;padding:.85rem 1.4rem;border:1.5px solid var(--cyan);border-radius:999px;text-decoration:none;font-weight:600;font-size:1.05rem;box-shadow:0 0 8px rgba(39,243,255,.3);transition:transform .2s}
+.clink:hover,.clink:focus-visible{transform:translateY(-3px)}
+.clink svg{width:24px;height:24px;flex:none}
+@media (prefers-reduced-motion:reduce){.ico,.clink{transition:none}}
+/* About: text + code window */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:start}
+.code{background:#0A0B0F;border:1.5px solid var(--cyan);border-radius:18px;padding:1rem 1.25rem 1.25rem;box-shadow:0 0 10px rgba(39,243,255,.3)}
+.code .dots{display:flex;gap:.4rem;margin-bottom:.8rem}
+.code .dots i{width:.7rem;height:.7rem;border-radius:50%;background:#FF5F57}
+.code .dots i:nth-child(2){background:#FEBC2E}
+.code .dots i:nth-child(3){background:#28C840}
+.code pre{margin:0;overflow-x:auto;font:500 .88rem/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#E6E8F2}
+.code .k{color:#FF7AD9}.code .v{color:#27F3FF}.code .p{color:#FFD21F}.code .s{color:#9BE564}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+/* Skills grid + font mix */
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.25rem}
+.skill-card{padding:1.5rem;border:1.5px solid var(--line);border-radius:22px;background:rgba(255,255,255,.03)}
+.skill-card h3{margin-bottom:1rem;font-size:1.3rem}
+.skill-card:nth-child(1){border-color:var(--cyan);box-shadow:0 0 8px rgba(39,243,255,.25)}
+.skill-card:nth-child(2){border-color:var(--pink);box-shadow:0 0 8px rgba(255,61,186,.25)}
+.skill-card:nth-child(3){border-color:var(--y);box-shadow:0 0 8px rgba(255,210,31,.25)}
+.skill-card .chips li{font-size:.85rem;box-shadow:none}
+.edu{display:flex;align-items:center;gap:1.25rem;padding:1.25rem 1.5rem;border:1.5px solid var(--line);border-radius:22px}
+.edu p{margin:0;color:var(--mute)}
+.edu-n{font-family:"Bebas Neue",sans-serif;font-size:3.4rem;line-height:1;color:#fff;text-shadow:0 0 10px rgba(255,61,186,.5)}
+.hi{font-family:"Caveat",cursive;font-size:clamp(1.7rem,3.2vw,2.5rem);color:var(--y);margin-bottom:.3rem;transform:rotate(-2deg);transform-origin:left;position:relative;z-index:3}
+h3{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;text-transform:none;line-height:1.15;letter-spacing:-.01em}
+.row h3{font-size:clamp(1.5rem,3.4vw,2.2rem)}
+.card h3{font-size:clamp(1.7rem,4.4vw,2.8rem)}
+.lead,nav,.tag,.cta,.pill,.chips li,.clink,.btn{font-family:"Space Grotesk",system-ui,sans-serif}
+.lead{font-weight:500}
+.row .n{font-family:"Bebas Neue",sans-serif;font-size:clamp(3rem,7vw,5rem)}
+.card .n{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.2rem,8vw,5.5rem)}
+.hero .tag{max-width:min(52vw,600px);line-height:1.8}
+@media (max-width:860px){.skill-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.hero .tag{max-width:none}}
 /* Neon */
 :root{--pink:#FF3DBA;--cyan:#27F3FF}
 .hero h1{color:#fff;text-shadow:0 0 2px rgba(255,255,255,.8),0 0 10px rgba(255,61,186,.55),0 0 24px rgba(255,61,186,.4);animation:flick 2.2s .3s both}
 h2{color:#fff;text-shadow:0 0 2px rgba(255,255,255,.8),0 0 10px rgba(39,243,255,.5),0 0 24px rgba(39,243,255,.35)}
 .row .n,.card .n{color:#fff;text-shadow:0 0 2px rgba(255,255,255,.8),0 0 10px rgba(255,61,186,.5),0 0 24px rgba(255,61,186,.35)}
 .row h3,.card h3{text-shadow:0 0 8px rgba(39,243,255,.3)}
-.track{text-shadow:0 0 8px rgba(39,243,255,.4)}
-.track span:nth-child(even){color:#fff;text-shadow:0 0 2px rgba(255,255,255,.8),0 0 10px rgba(255,61,186,.5)}
 .mail{color:#fff;text-shadow:0 0 2px rgba(255,255,255,.8),0 0 10px rgba(39,243,255,.5),0 0 24px rgba(39,243,255,.35)}
 .hero .tag b{text-shadow:0 0 8px rgba(255,210,31,.5)}
 .card{border-color:var(--cyan);box-shadow:0 0 8px rgba(39,243,255,.35),inset 0 0 12px rgba(39,243,255,.1)}
@@ -99,9 +138,18 @@ html{scroll-padding-top:4.5rem}
 
 <header class="hero" data-theme="dark">
   <div class="wrap">
+    <div class="hi">Hello, I’m</div>
     <h1>Varatharajan<br>Sajanthan</h1>
     <p class="tag">Software Engineering Intern <b>/</b> Java <b>/</b> Spring Boot <b>/</b> React</p>
-    <a class="cta" href="mailto:varatharajansajanthan@gmail.com">Hire me</a>
+    <div class="row-actions">
+      <a class="cta" href="mailto:varatharajansajanthan@gmail.com">Hire me</a>
+      <div class="socials">
+        <a class="ico" href="mailto:varatharajansajanthan@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></a>
+        <a class="ico" href="https://www.linkedin.com/in/varatharajan-sajanthan" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.54h.06c.53-1 1.82-2.04 3.75-2.04 4 0 4.74 2.63 4.74 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4V9.75z"/></svg></a>
+        <a class="ico" href="https://wa.me/94786662871?text=Hi%20Sajanthan%2C%20I%20saw%20your%20portfolio." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+        <a class="ico" href="https://github.com/vsajanthan-prog" aria-label="GitHub"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+      </div>
+    </div>
   </div>
   <!-- AVATAR: replace the .avatar-ph block with <img src="..."> or <video autoplay muted loop playsinline src="..."></video> -->
   <div class="avatar" id="avatar">
@@ -112,9 +160,22 @@ html{scroll-padding-top:4.5rem}
 <section id="about" data-theme="light">
   <div class="wrap">
     <h2>About</h2>
+    <div class="about-grid"><div>
     <p class="lead">I’m an NDICT student at College of Technology, Jaffna, currently working as a software engineering intern.</p>
     <p class="lead">I’m part of a team building a defect tracker web application using Java, Spring Boot, and React. I’m looking for entry-level software developer and internship opportunities where I can keep learning and contribute to real projects.</p>
-    <div style="margin-top:3.5rem">
+    </div>
+    <aside class="code" aria-label="Profile written as code">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <pre><code><span class="k">const</span> <span class="v">sajanthan</span> = {
+  <span class="p">role</span>: <span class="s">"Software Engineering Intern"</span>,
+  <span class="p">stack</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>,
+          <span class="s">"React"</span>, <span class="s">"MySQL"</span>],
+  <span class="p">location</span>: <span class="s">"Jaffna, Sri Lanka"</span>,
+  <span class="p">learning</span>: <span class="s">"every day"</span>,
+  <span class="p">openToWork</span>: <span class="k">true</span>
+};</code></pre>
+    </aside></div>
+    <div style="margin-top:2rem">
       <div class="row"><div class="n">01</div><div><h3>Backend development</h3><p>REST API development with Java and Spring Boot.</p></div></div>
       <div class="row"><div class="n">02</div><div><h3>Database design</h3><p>MySQL database design, ER diagrams, and entity mapping.</p></div></div>
       <div class="row"><div class="n">03</div><div><h3>Frontend integration</h3><p>Connecting React frontends with backend APIs.</p></div></div>
@@ -149,17 +210,13 @@ html{scroll-padding-top:4.5rem}
 
 <section id="skills" data-theme="light">
   <div class="wrap"><h2>Skills</h2></div>
-  <div class="marquee" aria-hidden="true">
-    <div class="track">
-      <span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span><span>JavaScript</span><span>HTML / CSS</span><span>Git</span><span>GitHub</span><span>Postman</span><span>Swagger</span>
-      <span>Java</span><span>Spring Boot</span><span>React</span><span>MySQL</span><span>JavaScript</span><span>HTML / CSS</span><span>Git</span><span>GitHub</span><span>Postman</span><span>Swagger</span>
-    </div>
-  </div>
   <div class="wrap">
-    <p><strong>Development:</strong> Java, Spring Boot, React, JavaScript, HTML, CSS, MySQL</p>
-    <p><strong>Tools:</strong> Git, GitHub, Postman, Swagger</p>
-    <p><strong>Design:</strong> Adobe Photoshop, Adobe Illustrator, Adobe InDesign</p>
-    <p style="margin-top:2.5rem"><strong>Education:</strong> National Diploma in ICT (NVQ Level 5), College of Technology, Jaffna. 2025 to 2026</p>
+    <div class="skill-grid">
+      <div class="skill-card"><h3>Development</h3><ul class="chips"><li>Java</li><li>Spring Boot</li><li>React</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>MySQL</li></ul></div>
+      <div class="skill-card"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>Postman</li><li>Swagger</li></ul></div>
+      <div class="skill-card"><h3>Design</h3><ul class="chips"><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li>Adobe InDesign</li></ul></div>
+    </div>
+    <div class="edu"><span class="edu-n">NVQ 5</span><div><h3>National Diploma in ICT</h3><p>College of Technology, Jaffna. 2025 to 2026</p></div></div>
   </div>
 </section>
 
@@ -167,8 +224,13 @@ html{scroll-padding-top:4.5rem}
   <div class="wrap">
     <h2>Let’s talk</h2>
     <p class="lead">Open to entry-level software developer and internship roles.</p>
-    <a class="mail" href="mailto:varatharajansajanthan@gmail.com">varatharajansajanthan@gmail.com</a>
-    <p style="margin-top:1.5rem"><a href="https://www.linkedin.com/in/varatharajan-sajanthan">LinkedIn profile</a></p>
+    <div class="contact-links">
+      <a class="clink" href="mailto:varatharajansajanthan@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg><span>varatharajansajanthan@gmail.com</span></a>
+      <a class="clink" href="https://www.linkedin.com/in/varatharajan-sajanthan"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.54h.06c.53-1 1.82-2.04 3.75-2.04 4 0 4.74 2.63 4.74 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.59V21h-4V9.75z"/></svg><span>LinkedIn</span></a>
+      <a class="clink" href="https://wa.me/94786662871?text=Hi%20Sajanthan%2C%20I%20saw%20your%20portfolio."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>078 666 2871</span></a>
+      <a class="clink" href="https://github.com/vsajanthan-prog"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span>GitHub</span></a>
+    </div>
+    
     <footer>© 2026 Varatharajan Sajanthan</footer>
   </div>
 </section>
